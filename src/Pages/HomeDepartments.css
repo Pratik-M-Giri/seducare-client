@@ -1,0 +1,224 @@
+/* Main container for the section */
+.home-departments {
+  padding: 40px 0;
+  background-color: rgb(216, 227, 232);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 1.125rem;
+  color: #6c757d;
+}
+
+.options-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.options-buttons .btn {
+  margin: 5px;
+  border: 1px solid black; /* Black border */
+  color: black; /* Black text */
+  transition: all 0.3s ease;
+  background-color: transparent; /* Transparent background by default */
+  position: relative;
+  overflow: hidden;
+}
+
+.options-buttons .btn.active,
+.options-buttons .btn:hover {
+  background-color: #ffcc00; /* Yellow background */
+  color: black; /* Black text */
+}
+
+.options-buttons .btn.active::before,
+.options-buttons .btn:hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white wave */
+  transition: all 0.6s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 0;
+}
+
+.options-buttons .btn:hover::before {
+  animation: waveEffect 1.2s infinite;
+}
+
+.options-buttons .btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-left: 150px;
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Optional: maximum width for larger screens */
+}
+
+.tab-pane {
+  display: flex;
+  flex-direction: row; /* Align text and image horizontally */
+  align-items: stretch; /* Stretch to full height */
+}
+
+.tab-content .card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%; /* Full width */
+}
+
+.tab-content .card-header {
+  background-color: #ffcc00; /* Yellow background */
+  color: black; /* Black text */
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab-content .card-body {
+  display: flex;
+  flex-direction: row; /* Align text and image horizontally */
+  align-items: stretch; /* Stretch to full height */
+}
+
+.tab-content .card-body .text-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.tab-content .card-body .image-content {
+  flex: 0 0 40%; /* Adjust width of image container */
+  max-width: 50%; /* Optional: Limit image container width */
+  position: relative;
+}
+
+.tab-content .card-body .img-fluid {
+  width: 100%;
+  height: 100%; /* Full height */
+  object-fit: cover; /* Ensure the image covers the container */
+  border-radius: 8px;
+}
+
+.fst-italic {
+  font-style: italic;
+} 
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .tab-content .col-lg-8 {
+    max-width: 100%;
+  }
+
+  .tab-content .col-lg-6 {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-departments {
+    padding: 20px 0;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .section-title p {
+    font-size: 1rem;
+  }
+
+  .options-buttons .btn {
+    margin: 3px;
+    font-size: 0.875rem;
+  }
+
+  .tab-content .card-header {
+    padding: 10px;
+  }
+
+  .tab-content .card-body {
+    padding: 15px;
+  }
+
+  .tab-content .col-lg-8,
+  .tab-content .col-lg-6 {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-departments {
+    padding: 10px 0;
+    width: 240vw;
+  }
+
+  .section-title h2 {
+    font-size: 1.9rem;
+  }
+
+  .section-title .mini-heading {
+    font-size: 1.9rem;
+  }
+
+  .options-buttons .btn {
+    margin: 10px;
+    font-size: 1.9rem;
+  }
+
+  .tab-content .card-header {
+    padding: 8px;
+    
+    font-size: 1.5rem; /* Adjusted for better fit */
+  }
+
+  .tab-content .card-body {
+    padding: 10px;
+  }
+
+  .tab-content{
+    margin-left: 12px;
+
+  }
+
+
+  .tab-content .card-body .img-fluid {
+    padding: 5px;
+    border-radius: 8px; /* Adjusted for better fit */
+  }
+
+  .tab-content .img-fluid {
+    max-width: 100%; /* Ensure image width is responsive */
+    border-radius: 8px; /* Adjusted for better fit */
+  }
+
+  .tab-content .col-lg-8,
+  .tab-content .col-lg-6 {
+    padding: 5px;
+    font-size: 1.5rem; /* Adjusted for better fit */
+  }
+}

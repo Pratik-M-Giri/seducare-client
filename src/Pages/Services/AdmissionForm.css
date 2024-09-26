@@ -1,0 +1,70 @@
+/* AdmissionForm.css */
+.admission-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+  }
+  
+  .admission-form-container h2{
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .admission-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .admission-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .admission-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .admission-form .form-group input,
+  .admission-form .form-group textarea,
+  .admission-form .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .admission-form .form-group textarea {
+    resize: vertical;
+  }
+  
+  .admission-form .submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffcc00; /* Yellow background */
+    color: #000; /* Black text */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .admission-form .submit-button:hover {
+    background-color: #e6b800; /* Darker yellow on hover */
+  }
+  .invalid-feedback {
+    color: red;
+    font-size: 0.9em;
+  }
+  
+  .is-invalid {
+    border-color: red;
+  }
+  

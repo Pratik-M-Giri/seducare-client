@@ -1,0 +1,243 @@
+/* BhmsInfo.css */
+.bhms-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  
+  .bhms-info-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Space below the content section */
+  }
+  
+  .bhms-info-image {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px; /* Space between image and text */
+    flex-shrink: 0; /* Prevent image from shrinking */
+  }
+  
+  .bhms-info-description {
+    width: 60%;
+  }
+  
+  .bhms-info-description h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .bhms-info-description p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .bhms-info-fullwidth {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  
+  .bhms-info-fullwidth h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  
+  .bhms-info-fullwidth p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .bhms-info-fullwidth ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .admission-button {
+    background: linear-gradient(135deg, #ffcc00, #ff6600);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+  }
+  
+  .admission-button:hover {
+    background: linear-gradient(135deg, #ff6600, #ffcc00);
+  }
+
+
+
+
+
+  /* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .bhms-info-container {
+    padding: 15px;
+    margin-top: 50px;
+  }
+
+  .bhms-info-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bhms-info-image {
+    width: 50%;
+    margin-right: 0; /* Remove margin for column layout */
+    margin-bottom: 20px; /* Space below image */
+  }
+
+  .bhms-info-description {
+    width: 100%;
+  }
+
+  .bhms-info-description h1 {
+    font-size: 1.8rem;
+  }
+
+  .bhms-info-description p {
+    font-size: 0.9rem;
+  }
+
+  .bhms-info-fullwidth {
+    padding: 0 15px;
+  }
+
+  .bhms-info-fullwidth h2 {
+    font-size: 1.4rem;
+  }
+
+  .bhms-info-fullwidth p {
+    font-size: 0.9rem;
+  }
+
+  .admission-button {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .bhms-info-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bhms-info-image {
+    width: 80%;
+    margin-bottom: 20px; /* Space below image */
+  }
+
+  .bhms-info-description {
+    width: 100%;
+  }
+
+  .bhms-info-description h1 {
+    font-size: 1.6rem;
+  }
+
+  .bhms-info-description p {
+    font-size: 0.85rem;
+  }
+
+  .bhms-info-fullwidth {
+    padding: 0 10px;
+  }
+
+  .bhms-info-fullwidth h2 {
+    font-size: 1.2rem;
+  }
+
+  .bhms-info-fullwidth p {
+    font-size: 0.85rem;
+  }
+
+  .admission-button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .bhms-info-container {
+    padding: 5px;
+    width: 240vw;
+    margin-top: 20px;
+  }
+
+  .bhms-info-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bhms-info-image {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .bhms-info-description {
+    width: 100%;
+    text-align: start;
+  }
+
+  .bhms-info-description h1 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .bhms-info-description p {
+    font-size: 1.75rem;
+    text-align: start;
+
+  }
+
+  .bhms-info-fullwidth {
+    padding: 0 5px;
+    font-size: 1.75rem;
+    margin-top: 10px;
+    text-align: start;
+
+  }
+
+  .bhms-info-fullwidth h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .bhms-info-fullwidth p {
+    font-size: 1.75rem;
+    text-align: start;
+
+  }
+
+  .admission-button {
+    padding: 8px 15px;
+    font-size: 10px;
+  }
+
+
+  .bhms-info-image{
+    margin-top: 70px;
+  }
+
+  .admission-button{
+    font-size: 2rem;
+  }
+
+
+}

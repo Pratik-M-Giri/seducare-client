@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+
+.about-compofirst {
+  position: relative;
+  background-image: url('../../assets/Img/AboutusBG.png'); /* Path to your image */
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  width: 100vw; /* Full viewport width */
+  min-height: 30vh; /* Minimum height to ensure visibility */
+  height: 55vh; /* Adjust height based on content */
+  max-height: 55vh; /* Maximum height to keep it reasonable */
+}
+
+
+
+/* Ensure text and other content are above the overlay */
+.about-compofirst > * {
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 2; /* Place content above the overlay */
+}
+
+/* Heading styling */
+.about-heading {
+  font-size: 6rem;
+  color: #fff;
+  margin: 20px;
+  z-index: 3;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+  font-weight: 700; /* Make the text bolder */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+}
+
+/* Slogan styling */
+.about-slogan {
+  font-family: 'Kanit', sans-serif;
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #ffcc00; /* Yellow text color for the slogan */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about-slogan:hover {
+  color: #fff; /* Change to white on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .about-heading {
+    font-size: 4rem; /* Adjust for larger tablets */
+  }
+
+  .about-slogan {
+    font-size: 1.8rem; /* Adjust for larger tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-compofirst {
+    height: 50vh; /* Reduce height for smaller screens */
+  }
+
+  .about-heading {
+    font-size: 3rem; /* Adjust for medium screens */
+  }
+
+  .about-slogan {
+    font-size: 1.5rem; /* Adjust for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-compofirst {
+    height: auto; /* Adjust height for small screens to fit content */
+    margin-top: 100px; /* Adjust top margin */
+    width: 240vw; /* Ensure full viewport width */
+  }
+
+  .about-heading {
+    font-size: 2.5rem; /* Adjust for smaller screens */
+    margin: 10px; /* Reduce margin */
+  }
+
+  .about-slogan {
+    font-size: 1.2rem; /* Adjust for smaller screens */
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

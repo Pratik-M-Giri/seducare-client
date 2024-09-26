@@ -1,0 +1,190 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Section Styles */
+.tutors-section {
+  background-color: rgb(254, 189, 89);
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* Title Styles */
+.section-title h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #666;
+  font-size: 18px;
+}
+
+/* Button Group Styles */
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button-group .btn {
+  background-color: #ffffff; /* Default button background */
+  border: 2px solid #ffde59;
+  color: #333;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.button-group .btn.active {
+  background-color: #333; /* Active button background */
+  color: #ffde59;
+}
+
+.button-group .btn:hover {
+  background-color: #ffde59;
+  color: black;
+}
+
+/* Tutor Card Styles */
+.tutors-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center align */
+}
+
+/* Default for larger screens */
+.tutor-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: calc(25% - 20px); /* Four cards per row on larger screens */
+  height: auto; /* Flexible height */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.tutor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tutor-card .pic {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.tutor-card .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the square area */
+  border-radius: 8px;
+}
+
+.tutor-card h4 {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.tutor-card span {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Know More Button Styles */
+.know-more-container {
+  display: flex;
+  justify-content: center;
+}
+
+.know-more-btn {
+  background-color: #333;
+  color: #ffde59;
+  border: 2px solid #ffde59;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.know-more-btn:hover {
+  background-color: #ffde59;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .tutor-card {
+    width: calc(33.333% - 20px); /* Three cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .button-group .btn {
+    padding: 8px 16px;
+    margin: 0 5px;
+  }
+
+  .tutors-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tutor-card {
+    width: calc(50% - 20px); /* Two cards per row */
+  }
+}
+
+@media (max-width: 578px) {
+
+
+  .tutors-container {
+    overflow: hidden; /* Hide overflow to ensure only one card is visible */
+  }
+
+  .tutors-section .description{
+    font-size: 2rem;
+  }
+
+  .button-group .btn{
+    font-size: 2rem;
+  }
+
+  .tutor-card {
+    width: 100%; /* Full width for small screens */
+    height: 600px; /* Increase height for small screens */
+    margin: 0; /* Remove margin for better alignment */
+  }
+
+  .tutor-card .pic {
+    height: 500px; /* Adjust the image container height */
+  }
+
+  .tutor-card .pic img {
+    height: 100%; /* Ensure the image covers the container */
+  }
+
+  .tutors-section {
+    padding: 40px 0; /* Adjust padding for better spacing */
+    width: 240vw;
+  }
+
+  .tutors-container .tutor-info{
+    font-size: 1rem;
+  }
+
+}

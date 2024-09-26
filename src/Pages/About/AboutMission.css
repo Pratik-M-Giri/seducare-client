@@ -1,0 +1,147 @@
+/* Full-width grey background for specific component */
+.grey-background {
+  background-color: #f0f0f0; /* Light grey background color */
+  padding: 20px 0; /* Add padding for spacing */
+  width: 100%; /* Ensure it spans the full width of the viewport */
+}
+
+/* General container settings */
+.container {
+  padding: 20px;
+}
+
+/* Image section styling */
+.image-container {
+  text-align: center;
+  opacity: 0; /* Initially hidden for animation */
+  transform: translateY(30px); /* Initial position for animation */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Animation timing */
+}
+
+.image-container.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to final position */
+}
+
+.section-image {
+  width: 100%; /* Ensure the image fits within its container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 750px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; /* Animation timing */
+}
+
+/* Hover effect for image */
+.section-image:hover {
+  /* transform: scale(1.05) rotate(3deg); */
+   /* 3D effect with scaling and slight rotation */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Text content styling */
+.text-content {
+  padding: 20px;
+  opacity: 0; /* Initially hidden for animation */
+  transform: translateY(30px); /* Initial position for animation */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Animation timing */
+}
+
+.text-content.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to final position */
+}
+
+
+.mission-heading{
+  font-weight: 600;
+}
+
+.mission-vision {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between mission and vision sections */
+}
+
+.mission, .vision {
+  opacity: 0; /* Initially hidden for animation */
+  transform: translateY(20px); /* Initial position for animation */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+  /* Animation timing */
+}
+
+.mission.visible, .vision.visible {
+  opacity: 1;
+  transform: translateY(0); 
+  /* Move to final position */
+}
+
+.mission h1, .vision h1 {
+  font-size: 3rem; /* Increased font size */
+  margin-bottom: 15px;
+}
+
+.mission p, .vision p {
+  font-size: 1.4rem; /* Increased paragraph font size */
+  line-height: 1.8;
+  color: #333;
+  transition: color 0.3s ease; /* Smooth transition for text color change */
+}
+
+.mission p:hover, .vision p:hover {
+  color: rgb(244,174,18); /* Change color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .section-image {
+    max-width: 80%; /* Ensure image fits on larger tablets */
+  }
+
+  .mission h1, .vision h1 {
+    font-size: 2.8rem; /* Adjusted for tablets */
+  }
+
+  .mission p, .vision p {
+    font-size: 1.6rem; /* Adjusted paragraph font size for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .grey-background {
+    padding: 15px 0; /* Reduce padding for smaller screens */
+  }
+
+  .section-image {
+    max-width: 90%; /* Ensure image fits on smaller screens */
+  }
+
+  .mission h1, .vision h1 {
+    font-size: 2.5rem; /* Adjusted for smaller screens */
+  }
+
+  .mission p, .vision p {
+    font-size: 1.4rem; /* Adjusted paragraph font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+
+
+  .grey-background {
+    padding: 10px 0; /* Further reduce padding for very small screens */
+    width: 240vw;
+  }
+
+  .section-image {
+    max-width: 100%; /* Ensure image fits on very small screens */
+  }
+
+  .mission h1, .vision h1 {
+    text-align: center;
+  }
+
+  .mission p, .vision p {
+    font-size: 2.5rem; /* Adjusted paragraph font size for very small screens */
+  }
+}

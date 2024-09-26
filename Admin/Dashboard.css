@@ -1,0 +1,61 @@
+/* Dashboard.css */
+.top-btns{
+  margin-top: 100px;
+}
+.custom-table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width */
+    max-width: 100%; /* Prevent overflow */
+    height: 400px; /* Fixed height */
+    overflow-y: auto; /* Scroll if content overflows */
+  }
+  
+  .custom-table thead {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 12px 15px;
+    text-align: center;
+  }
+  
+  .custom-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .custom-table tbody tr:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+  }
+  
+  .custom-table thead th {
+    font-weight: bold;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+  }
+  
+  .pagination .page-item.active .page-link {
+    background-color: #007bff;
+    color: black;
+  }
+  
+  .pagination .page-link {
+    color: #007bff;
+    border: 1px solid #dee2e6;
+  }
+  
+  .pagination .page-link:hover {
+    color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .btn-primary {
+    margin: 0 10px;
+  }
+  

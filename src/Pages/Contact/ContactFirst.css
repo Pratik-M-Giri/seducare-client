@@ -1,0 +1,162 @@
+/* General page styling */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+
+}
+
+.contact-container p{
+  font-size: 1rem;
+}
+
+.container-right .contact-info p{
+  font-size: 1rem;
+}
+
+
+.contact-box {
+  display: flex;
+  gap: 20px;
+  background-color: #f0f0f0; /* Grey background color */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.SendMsg {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.heading h1, .heading p {
+  text-align: center;
+}
+
+.container-left, .container-right {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-left {
+  margin-right: 20px;
+}
+
+
+
+h3 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 500;
+  font-style: initial;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.input-group {
+  flex: 1;
+  min-width: 0; /* Ensure input groups can shrink */
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.map {
+  margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+  .contact-box {
+      flex-direction: column;
+      gap: 10px; /* Reduce gap for smaller screens */
+  }
+
+  .container-left, .container-right {
+      margin: 0;
+      padding: 15px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 10px;
+    margin-top: 30px;
+    width: 240vw; /* Consider adjusting this width as needed */
+  }
+
+  .contact-container .heading .heading-desc {
+    font-size: 2rem;
+  }
+
+  .contact-box .container-left .sendmsgBTN .btn-warning {
+    font-size: 2rem;
+  }
+
+  .contact-container .heading h1 {
+    font-size: 2.5rem; /* Adjust font size */
+    text-align: center;
+  }
+
+  .contact-container .heading p {
+    font-size: 1.25rem; /* Adjust font size */
+  }
+
+  .container-left h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  label {
+    font-size: 2rem; /* Adjust font size for labels */
+  }
+
+  .sendmsgBTN .SendMsg {
+    font-size: 1rem;
+    margin: 20px auto; /* Center button */
+  }
+
+  input, textarea {
+    font-size: 2rem; /* Adjust font size for inputs */
+    padding: 8px;
+    border: 4px solid black; /* Add border to input and textarea */
+  }
+
+  .contact-info p {
+    font-size: 2rem; /* Adjust font size for contact info */
+  }
+
+  .container-right h3 {
+    font-size: 2.5rem;
+  }
+
+  .map {
+    margin-top: 10px; /* Reduced margin for small screens */
+  }
+
+  .contact-container .contact-box .container-left h3 {
+    font-size: 2rem;
+  }
+
+  .container-right .contact-info p {
+    font-size: 2rem;
+  }
+}
+

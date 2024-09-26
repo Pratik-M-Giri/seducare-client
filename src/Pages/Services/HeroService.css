@@ -1,0 +1,92 @@
+/* Define the keyframe animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Hero container styling */
+.hero-service-container {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  background-image: url('../../assets/Img/ServicesBG.png'); /* Path to your image */
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  overflow: hidden; /* Ensure no overflow of content */
+  color: #fff; /* Ensure text is visible on dark backgrounds */
+  height: 55vh; /* Default height of the viewport */
+  min-height: 30vh; /* Minimum height to ensure visibility */
+  max-height: 55vh; /* Maximum height to keep it reasonable */
+  transition: opacity 1s ease-out; /* Smooth transition for fade-in effect */
+}
+
+/* Ensure content is above the overlay */
+.hero-service-container > * {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Heading styling */
+.hero-service-container h1 {
+  font-size: 3rem;
+  color: #000;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  animation: fadeIn 1s ease-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for better visibility */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero-service-container {
+    height: 40vh; /* Adjust height for medium screens */
+  }
+
+  .hero-service-container h1 {
+    font-size: 2.5rem; /* Adjust font size for medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-service-container {
+    height: 35vh; /* Adjust height for smaller screens */
+  }
+
+  .hero-service-container h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-service-container {
+    height: 30vh; /* Further adjust height for mobile screens */
+  }
+
+  .hero-service-container h1 {
+    font-size: 1.75rem; /* Adjust font size for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-service-container {
+    height: auto; /* Adjust height for small screens to fit content */
+    width: 240vw; /* Ensure full viewport width */
+    margin-top: 100px; /* Remove top margin */
+  }
+
+  .hero-service-container h1 {
+    font-size: 1.5rem; /* Further adjust font size for very small screens */
+  }
+}

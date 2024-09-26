@@ -1,0 +1,162 @@
+/* Section styling */
+.appointment {
+  padding: 60px 15px; /* Adjust padding for better spacing */
+  position: relative;
+  background-color: #f8f9fa; /* Light gray background */
+  z-index: 1;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem; /* Adjusted font size for better readability */
+  color: #333;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 3px;
+  background-color: #f1c40f;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title p {
+  color: #666;
+  font-size: 1rem; /* Adjusted font size */
+  line-height: 1.5; /* Improve line spacing */
+}
+
+/* Form styling */
+.php-email-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+}
+
+.form-control,
+.form-select {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 12px; /* Increased padding for better usability */
+  font-size: 1rem; /* Adjusted font size */
+  width: 100%; /* Ensure full width */
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+/* Button styling */
+button {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1rem; /* Adjust font size */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Animations on scroll */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+
+  .appointment .container form {
+    font-size: 2rem;
+  }
+
+  .section-title h2 {
+    font-size: 4.75rem; /* Smaller font size on small screens */
+  }
+
+  .appointment .container form::placeholder {
+    font-size: 2rem;
+  }
+
+  .appointment .section-title p {
+    font-size: 2rem;
+  }
+
+  .section-title p {
+    font-size: 3.75rem; /* Adjusted font size */
+  }
+
+  .php-email-form {
+    padding: 20px;
+  }
+
+  .container form .row input,
+  .container form .form-select,
+  .container form .form-group textarea {
+    font-size: 2rem;
+    border: 2px solid  black; /* Add border to input, select, and textarea */
+    padding: 10px; /* Adjust padding to accommodate the border */
+  }
+
+  .container .mt-3 .text-center button {
+    font-size: 2rem;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 1.875rem; /* Adjusted font size */
+    padding: 10px; /* Reduced padding for smaller screens */
+    border: 2px solid #ddd; /* Add border to form-control and form-select */
+  }
+
+  button {
+    font-size: 1.875rem; /* Adjusted font size */
+    padding: 10px 15px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 2rem; /* Smaller font size on medium screens */
+  }
+}
+
+
+.error {
+  color: red;
+  font-size: 0.875rem; /* Adjust size as needed */
+  margin-top: 0.25rem; /* Space between input and error message */
+}

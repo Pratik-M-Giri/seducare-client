@@ -1,0 +1,205 @@
+.footer {
+  background-color: #000000; /* Black background for the footer */
+  color: #ffffff; /* White text color for readability */
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Container styling */
+.footer .container {
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+/* Logo styling */
+.footer-logo {
+  text-align: center;
+  padding: 0;
+}
+
+.footer-logo-img {
+  max-width: 60%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo-img:hover {
+  transform: scale(1.1);
+}
+
+/* Contact Form styling */
+.contact-form {
+  padding: 10px;
+}
+
+.contact-form h4 {
+  color: #ffffff; /* White color for headings */
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.contact-form h4:hover {
+  color: #ffffff; /* Keep font color white on hover */
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form .form-control {
+  background-color: #333333; /* Dark background for inputs */
+  color: #ffffff; /* White text color */
+  border: 1px solid #ffffff; /* White border for inputs */
+  border-radius: 4px;
+}
+
+.contact-form .form-control::placeholder {
+  color: #ffffff; /* White placeholder text */
+}
+
+.contact-form .btn-primary {
+  background-color: #f1c40f; /* Button background color */
+  border: none;
+  color: #000000; /* Black text color */
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #ffffff; /* Button background on hover */
+  color: #f1c40f; /* Button text color on hover */
+}
+
+/* Contact Details styling */
+.contact-details {
+  padding: 10px;
+}
+
+.contact-details h4 {
+  color: #ffffff; /* White color for headings */
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.contact-details h4:hover {
+  color: #ffffff; /* Keep font color white on hover */
+}
+
+.contact-details p {
+  color: #ffffff; /* White color for paragraphs */
+  text-align: start;
+}
+
+/* Map Container styling */
+.map-container {
+  padding: 10px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none; /* Remove iframe border */
+}
+
+/* Footer Bottom styling */
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff; /* White text color */
+}
+
+.footer-bottom p {
+  color: #ffffff; /* White color for footer bottom text */
+}
+
+/* Social Icons styling */
+.social-icons-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  color: #f1c40f; /* Social icon color */
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ffffff; /* Change icon color on hover */
+}
+
+/* Show on scroll animation */
+.show-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .footer-logo-img {
+    max-width: 80%;
+  }
+
+  .contact-details, .map-container, .contact-form {
+    padding: 20px;
+  }
+
+  .map-container iframe {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-logo-img {
+    max-width: 100%;
+  }
+
+  .contact-details, .map-container, .contact-form {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .map-container iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    width: 240vw; /* Adjust width to ensure proper layout on small screens */
+  }
+
+  .contact-details h4, .map-container h4, .contact-form h4 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    font-size: 42px;
+  }
+
+  .contact-details p, .map-container p {
+    font-size: 24px;
+  }
+
+  .map-container iframe {
+    height: 150px;
+  }
+
+  .contact-form input {
+    font-size: 22px;
+  }
+
+  .contact-form textarea {
+    font-size: 22px;
+  }
+
+  .contact-form button {
+    font-size: 32px;
+  }
+}

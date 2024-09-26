@@ -1,0 +1,170 @@
+/* Base Navbar styles */
+.navbar {
+  position: fixed; /* Keeps the navbar fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
+  background-color: transparent; /* Initial transparent background */
+  box-shadow: none; /* No shadow initially */
+  border: none; /* No border */
+  z-index: 1000; /* Ensure the navbar is above other content */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background color and shadow */
+  display: flex; /* Use flexbox to arrange items */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between logo and links */
+}
+
+/* Scrolled navbar styles */
+.white-navbar {
+  background-color: white; /* Background color when scrolled */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow for better visibility */
+}
+
+/* Navbar brand styles */
+.navbar-brand {
+  display: flex;
+  align-items: center; /* Center logo vertically */
+  margin-right: auto; /* Keeps the logo on the left */
+}
+
+/* Logo styles */
+.navbar-logo {
+  width: 140px; /* Set the desired width for the logo */
+  height: 100px; /* Maintain the aspect ratio */
+}
+
+/* Navbar container adjustments */
+.navbar-collapse {
+  flex-grow: 0; /* Prevents the navbar links from expanding */
+}
+
+.navbar-nav {
+  margin-top: -32px;
+  display: flex;
+  align-items: center;
+  margin-left: 200px; /* Adjust the margin as needed */
+  padding-left: 1rem; /* Padding to create space between border and items */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+  margin-top: -45px;
+}
+
+/* Style for individual nav links */
+.navbar-nav .nav-link {
+  position: relative; /* Required for positioning the pseudo-elements */
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
+  border-radius: 0.25rem; /* Rounded corners for the link */
+  margin: 0 1rem; /* Add horizontal margin to create space between links */
+}
+
+/* Hover effect for nav links */
+.navbar-nav .nav-link:hover {
+  color: #000; /* Darker text color on hover */
+  background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+/* Add an underline effect on hover */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000; /* Color of the underline */
+  transform: scaleX(0); /* Hide the underline initially */
+  transition: transform 0.3s ease; /* Smooth transition for underline effect */
+}
+
+.navbar-nav .nav-link:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 600; /* Slightly lighter font weight */
+  color: #333; /* Dark gray text color */
+  text-transform: uppercase;
+  padding: 0.5rem 1rem; /* Padding for better click area */
+  border: none; /* No border for link */
+  background-color: transparent; /* Transparent background */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #000; /* Darker color on hover */
+  transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+/* Active link styles */
+.nav-link.active {
+  color: #000; /* Dark color for active link */
+  font-weight: 700; /* Bold font weight for active link */
+  text-decoration: underline; /* Underline for active link */
+}
+
+
+/* Responsive adjustments for tablets and smaller devices */
+@media (max-width: 992px) {
+  .navbar-nav {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center; /* Center items on tablets and smaller devices */
+  }
+
+  .navbar-logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar-collapse {
+    justify-content: center; /* Center the collapsible content */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.25rem; /* Increase font size for tablets */
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 576px) {
+  .navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center; /* Center items on mobile devices */
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 2.75rem; /* Increase font size for mobile devices */
+  }
+
+  .navbar-toggler {
+    background-color: black; /* Toggler button background color */
+    border: none; /* Remove border from toggler */
+  }
+
+  .navbar-toggler-icon {
+    background-image: none; /* Remove any background image */
+    color: white; /* Set color for icon */
+    font-size: 1.75rem; /* Adjust icon size */
+  }
+
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    outline: none; /* Remove default outline */
+    box-shadow: none; /* Remove default box-shadow */
+    background-color: black; /* Ensure background color stays black */
+  }
+
+  .navbar-toggler:focus:not(:focus-visible),
+  .navbar-toggler:active:not(:focus-visible) {
+    outline: none; /* Remove outline for non-visible focus */
+    box-shadow: none; /* Remove box-shadow for non-visible focus */
+  }
+}

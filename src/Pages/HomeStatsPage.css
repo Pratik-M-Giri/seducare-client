@@ -1,0 +1,180 @@
+/* Home Stats Page styles */
+.stats {
+  padding: 90px 0; /* Section padding */
+  background-color: rgb(254, 189, 89); /* Background color */
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four items per line */
+  gap: 30px; /* Adjusted gap between items */
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 30px; /* Padding for container */
+}
+
+.stats-item {
+  text-align: center;
+}
+
+.stats-icon {
+  font-size: 3rem; /* Icon size */
+  color: brown; /* Icon color */
+  margin-bottom: 20px;
+  transition: color 0.5s ease, transform 0.5s ease; /* Hover effects */
+}
+
+.stats-icon:hover {
+  color: black; /* Hover color */
+  transform: scale(1.1); /* Hover scale */
+}
+
+.stats-item .count {
+  display: block;
+  font-size: 2.5rem; /* Count size */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  animation: countAnimation 1s ease-in-out; /* Count animation */
+}
+
+.stats-item p {
+  font-size: 1rem; /* Label size */
+  color: #666;
+  margin-top: 10px;
+}
+
+@keyframes countAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+
+/* Tablets and medium screens */
+@media (max-width: 992px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr); /* Two items per line for medium screens */
+    gap: 20px; /* Reduced gap for medium screens */
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr); /* Two items per line for mobile screens */
+    gap: 15px; /* Adjusted gap for mobile screens */
+  }
+
+  .stats-icon {
+    font-size: 2rem; /* Smaller icon size for mobile screens */
+  }/* Home Stats Page styles */
+.stats {
+  padding: 90px 0; /* Section padding */
+  background-color: rgb(254, 189, 89); /* Background color */
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four items per line */
+  gap: 30px; /* Adjusted gap between items */
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 30px; /* Padding for container */
+}
+
+.stats-item {
+  text-align: center;
+}
+
+.stats-icon {
+  font-size: 3rem; /* Icon size */
+  color: brown; /* Icon color */
+  margin-bottom: 20px;
+  transition: color 0.5s ease, transform 0.5s ease; /* Hover effects */
+}
+
+.stats-icon:hover {
+  color: black; /* Hover color */
+  transform: scale(1.1); /* Hover scale */
+}
+
+.stats-item .count {
+  display: block;
+  font-size: 2.5rem; /* Count size */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  animation: countAnimation 1s ease-in-out; /* Count animation */
+}
+
+.stats-item p {
+  font-size: 1rem; /* Label size */
+  color: #666;
+  margin-top: 10px;
+}
+
+@keyframes countAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+
+/* Tablets and medium screens */
+@media (max-width: 992px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr); /* Two items per line for medium screens */
+    gap: 20px; /* Reduced gap for medium screens */
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+  .stats{
+    width: 240vw;
+  }
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr); /* Two items per line for mobile screens */
+    gap: 15px; /* Adjusted gap for mobile screens */
+    max-width: 100%; /* Full width on mobile */
+    padding: 0 10px; /* Reduced padding on mobile */
+    margin: 0; /* Remove margin for full width */
+  }
+
+  .stats-icon {
+    font-size: 2rem; /* Smaller icon size for mobile screens */
+  }
+
+  .stats-item .count {
+    font-size: 1.5rem; /* Smaller count size for mobile screens */
+  }
+
+  .stats-item {
+    padding: 10px; /* Reduced padding for mobile screens */
+    margin-bottom: 10px; /* Reduced margin for mobile screens */
+  }
+}
+
+
+  .stats-item .count {
+    font-size: 1.5rem; /* Smaller count size for mobile screens */
+  }
+
+  .stats-item {
+    padding: 10px; /* Reduced padding for mobile screens */
+    margin-bottom: 10px; /* Reduced margin for mobile screens */
+  }
+}

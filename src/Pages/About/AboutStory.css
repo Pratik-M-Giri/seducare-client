@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Kanit', sans-serif;
+}
+
+/* Ensure fade-in and slide-in animations are correctly applied */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 1s forwards;
+}
+
+.slide-in:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+
+.slide-in:nth-of-type(3) {
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+.its-heading{
+  font-weight: 600;
+}
+
+/* Ensure image styling is consistent */
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .story-container {
+    padding: 20px;
+  }
+
+  .story-content h1 {
+    font-size: 2rem; /* Adjust font size for larger tablets */
+  }
+
+  .story-content p {
+    font-size: 1.1rem; /* Adjust paragraph size for larger tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .story-container {
+    flex-direction: column;
+    padding: 15px; /* Adjust padding for medium screens */
+  }
+
+  .story-content {
+    padding-right: 0; /* Remove padding between content and image */
+  }
+
+  .story-image {
+    margin-top: 20px;
+  }
+
+  .story-image img {
+    max-width: 100%; /* Ensure image scales down on medium screens */
+  }
+
+  .story-content h1 {
+    font-size: 1.8rem; /* Adjust font size for medium screens */
+  }
+
+  .story-content p {
+    font-size: 1rem; /* Adjust paragraph size for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container{
+    width: 240vw;
+  }
+
+  .story-container {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+  
+  .story-content h1 {
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
+  }
+
+
+
+  .container .row .col-md-6  .text-center, p{
+    font-size: 2rem;
+  }
+  
+  .story-content p {
+    text-align: start;
+    font-size: 1.6rem; /* Adjust paragraph size for smaller screens */
+  }
+
+   .img-fluid {
+     width: 220vw;
+    border-radius: 12px; /* Adjust border-radius for smaller screens */
+  }
+}

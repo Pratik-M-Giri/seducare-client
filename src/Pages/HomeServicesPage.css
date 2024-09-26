@@ -1,0 +1,219 @@
+/* Section Styles */
+.services {
+  position: relative; /* Ensure relative positioning to contain the overlay */
+  padding: 60px 0;
+  background-color: rgb(216, 227, 232); /* Light background for the section */
+  /* background-image: url('../assets/Img/AboutBackground.png'); */
+   /* Path to your background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  color: black; /* Ensure text is readable over the background */
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensures it stays behind the content but over the image */
+}
+
+/* Adjust container to overlay content on background */
+.container {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
+}
+
+
+
+/* Section Title Styles */
+.section-title h2 {
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+  font-size: 2.5rem;
+  font-weight: 700; /* Bold font weight */
+  color: black; /* Black color for the heading */
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading */
+  letter-spacing: 1px; /* Slight spacing for readability */
+  text-decoration: none; /* Explicitly remove any underline */
+}
+
+/* Remove any hover effects for the heading */
+
+
+/* Remove the line/underline effects completely */
+.section-title h2::after {
+  display: none; /* Ensure underline or after element is removed */
+}
+
+.section-title h2:hover {
+  text-decoration: none;
+}
+
+
+
+
+/* Service Item Styles */
+.service-item {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border: 1px solid #f9c74f;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+  display: flex; /* Flexbox for better alignment */
+  flex-direction: column;
+  justify-content: space-between; /* Ensures even spacing between content and button */
+  margin-bottom: 30px; /* Uniform spacing between cards */
+}
+
+.service-item:hover {
+  background-color: #f9c74f;
+  color: black;
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-item:hover .icon {
+  color: #000; /* Icon turns black on hover */
+}
+
+/* Icon Styles */
+.service-item .icon {
+  font-size: 2.5rem;
+  color: #f9c74f;
+  margin-bottom: 15px;
+}
+
+.service-item a.stretched-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Heading and Text Styles */
+.service-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.service-item p {
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Truncates text after 3 lines */
+}
+
+/* Button Styles */
+.btn-enroll {
+  display: inline-block;
+  background-color: #f9c74f;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  align-self: center; /* Centers the button horizontally */
+  margin-top: auto; /* Ensures the button is pushed to the bottom of the card */
+}
+
+.service-item:hover .btn-enroll {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000; /* Black border on hover */
+  transform: scale(1.05);
+}
+
+.btn-enroll:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  transform: scale(1.05);
+}
+
+.service-item:hover .btn-enroll {
+  background-color: #fff; /* Change background color on hover */
+  color: #000; /* Change text color on hover */
+  border: 2px solid #000; /* Black border on hover */
+  transform: scale(1.05);
+}
+
+.btn-enroll:hover {
+  background-color: #fff; /* Change background color on hover */
+  color: #000; /* Change text color on hover */
+  border: 2px solid #000; /* Black border on hover */
+  transform: scale(1.05);
+}
+
+
+/* Mobile screen view */
+@media (max-width: 576px) {
+  .section-title h2::after {
+    display: none !important; /* Force removal of the line */
+  }
+
+  .services {
+    width: 240vw; /* Adjust width for small screens */
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .service-item .icon {
+    font-size: 2rem;
+  }
+
+  .service-item h3 {
+    font-size: 1.25rem;
+  }
+
+  .btn-enroll {
+    font-size: 0.875rem; 
+    padding: 8px 16px;
+  }
+
+  .service-item {
+    height: auto; /* Adjust height for mobile */
+  }
+}
+
+/* Tablet screen view */
+@media (max-width: 768px) {
+  .section-title h2::after {
+    display: none !important; /* Force removal of the line */
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .service-item .icon {
+    font-size: 2rem;
+  }
+
+  .service-item h3 {
+    font-size: 1.25rem;
+  }
+
+  .btn-enroll {
+    font-size: 0.875rem; 
+    padding: 8px 16px;
+  }
+
+  .service-item {
+    height: auto; /* Adjust height for tablets */
+  }
+}

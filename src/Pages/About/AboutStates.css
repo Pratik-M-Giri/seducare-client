@@ -1,0 +1,107 @@
+.about-states-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #f8f9fa; /* Light background for the entire section */
+  width: 100%; /* Full width of the container */
+  box-sizing: border-box; /* Include padding in width calculation */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.about-states-content {
+  max-width: 1200px; /* Maximum width for content */
+  margin: 0 auto; /* Center the content */
+  padding: 0 20px; /* Optional padding for responsiveness */
+}
+
+.about-states-heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+}
+
+.about-states-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items */
+  gap: 20px;
+}
+
+.stat-item {
+  flex: 1 1 200px; /* Flex basis for responsive layout */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  color: #f1c40f; /* Yellow color for numbers */
+  margin: 0;
+  font-weight: bold;
+}
+
+.stat-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .about-states-heading {
+    font-size: 2rem; /* Adjust font size for larger tablets */
+  }
+
+  .stat-number {
+    font-size: 3rem; /* Adjust number size for larger tablets */
+  }
+
+  .stat-description {
+    font-size: 1rem; /* Adjust description size for larger tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-states-container {
+    padding: 30px; /* Adjust padding for medium screens */
+  }
+
+  .about-states-heading {
+    font-size: 1.8rem; /* Adjust font size for medium screens */
+  }
+
+  .stat-number {
+    font-size: 2.5rem; /* Adjust number size for medium screens */
+  }
+
+  .stat-description {
+    font-size: 0.9rem; /* Adjust description size for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-states-container {
+    padding: 20px; /* Adjust padding for smaller screens */
+    width: 240vw;
+  }
+
+  .about-states-heading {
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .stat-item {
+    flex: 1 1 150px; /* Adjust flex basis for smaller screens */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .stat-number {
+    font-size: 2rem; /* Adjust number size for smaller screens */
+  }
+
+  .stat-description {
+    font-size: 1.55rem; /* Adjust description size for smaller screens */
+  }
+}

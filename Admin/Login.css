@@ -1,0 +1,122 @@
+/* Basic styles for container and card */
+.Login-container {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin-right:500px;
+  margin-top: 100px;
+}
+
+.card {
+  border-radius: 8px; /* Rounded corners for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%; /* Ensure card does not exceed container width */
+  max-width: 100%; /* Prevent card from exceeding container width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin-left: 200px;
+}
+
+.card-header {
+  background-color: #007bff; /* Primary color for header */
+  color: #fff; /* White text color */
+  border-bottom: none; /* Remove border for a cleaner look */
+  padding: 1rem; /* Adjust padding to fit well within the card */
+  box-sizing: border-box; /* Ensure padding fits within the header width */
+}
+
+.card-body {
+  padding: 2rem; /* Add padding inside the card body */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.form-label {
+  font-weight: bold; /* Bold labels for better readability */
+}
+
+.form-control {
+  border-radius: 4px; /* Rounded corners for input fields */
+  padding: 0.75rem; /* Padding inside input fields */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.btn-primary {
+  border-radius: 4px; /* Rounded corners for buttons */
+  padding: 0.75rem; /* Padding inside button */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Apply overflow hidden to body */
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+  /* Extra small devices (phones) */
+  @media (max-width: 576px) {
+    .card {
+      margin: 0 auto; /* Center card horizontally */
+      width: 240vw; /* Full width for small screens */
+      margin-top: 100px;
+    }
+  
+    .card-body {
+      padding: 2rem; /* Reduced padding on smaller screens */
+      font-size: 2rem;
+    }
+  
+    .container .card-body label{
+        font-size: 2rem;
+    }
+
+    .container .mb-3 input {
+        font-size: 2rem;
+    }
+
+    .form-label {
+      font-size: 0.875rem; /* Smaller font size for labels */
+    }
+  
+    .form-control {
+      font-size: 0.875rem; /* Smaller font size for input fields */
+    }
+  
+    .btn-primary {
+      font-size: 0.875rem; /* Smaller font size for button */
+    }
+
+
+    .container button{
+        font-size: 2.22rem;
+    }
+
+
+    .container .card-header h5{
+        font-size: 3rem;
+    }
+
+  }
+
+
+
+  @media(max-width: 578px){
+
+    .Login-container{
+      margin-top: 100px;
+      width: 240vw;
+    }
+    .card-header h5{
+      font-size: 42px;
+    }
+
+    .card-body label{
+      font-size: 32px;
+    }
+
+    .card-body form input{
+      font-size: 32px;
+    }
+
+    .card-body button{
+      font-size: 32px;
+    }
+
+
+  }
+
+  

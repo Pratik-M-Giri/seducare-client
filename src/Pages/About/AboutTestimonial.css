@@ -1,0 +1,213 @@
+/* Apply box-sizing globally to prevent overflow issues */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scroll and set background */
+.testimonial-wrapper {
+  background-color: rgb(255, 213, 139); /* Background color */
+  padding: 50px 0; /* Padding for spacing */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  position: relative;
+}
+
+/* Center the container horizontally and adjust padding */
+.testimonial-container {
+  width: 100%;
+  max-width: 1200px; /* Max width for the content */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 15px; /* Padding inside the container */
+  background-color: rgb(255, 213, 139); /* Match background color */
+  border-radius: 0 0 50px 50px; /* Rounded corners at the bottom */
+  position: relative; /* For positioning controls */
+}
+
+/* Flexbox for carousel items */
+.carousel-inner {
+  display: flex;
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Use @keyframes for animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation when the element comes into view */
+.testimonial-card {
+  background-color: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px; /* Margin for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1 1 280px; /* Flex basis for responsive layout */
+  height: 250px; /* Fixed height */
+  overflow: hidden; /* Hide overflow content */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-out; /* Animation for fade-in effect */
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-image img:hover {
+  transform: scale(1.1);
+}
+
+.testimonial-content {
+  height: 150px; /* Height adjusted to fit content within card */
+  overflow: hidden; /* Prevent overflow */
+  text-overflow: ellipsis; /* Add ellipsis if text is too long */
+}
+
+.testimonial-content p {
+  font-size: 16px; /* Larger font size for better readability */
+  color: #333;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.testimonial-content p:hover {
+  color: #ff9800; /* Change text color on hover */
+}
+
+.testimonial-content small {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.Test-heading {
+  font-weight: 600;
+}
+
+/* Carousel controls styling */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px; /* Adjust width */
+  height: 40px; /* Adjust height */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust vertical alignment */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 50%; /* Rounded controls */
+  border: none; /* Remove border */
+  opacity: 0.8; /* Slight transparency */
+  display: flex; /* Center icons within button */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  z-index: 1000; /* Ensure buttons are on top */
+  transition: background-color 0.3s, opacity 0.3s; /* Smooth transition */
+}
+
+/* Position carousel controls outside of content */
+.carousel-control-prev {
+  left: -42px; /* Position from the left */
+}
+
+.carousel-control-next {
+  right: -42px; /* Position from the right */
+}
+
+/* Styling for carousel control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  font-size: 20px; /* Adjust icon size */
+  color: #fff; /* Icon color */
+}
+
+/* Maintain the same position on hover */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background on hover */
+  opacity: 1; /* Fully opaque on hover */
+  transform: translateY(-50%); /* Maintain the vertical position */
+}
+
+/* Animate when scroll into view */
+@keyframes scrollIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply scroll animation */
+.testimonial-card {
+  animation: scrollIn 0.8s ease-out;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  .testimonial-wrapper {
+    padding: 30px 0; /* Adjust padding */
+  }
+
+  .testimonial-container {
+    padding: 0 10px; /* Adjust container padding */
+  }
+
+  .testimonial-card {
+    margin: 5px; /* Reduce margin for smaller screens */
+    height: auto; /* Auto height to accommodate content */
+    min-width: 200px; /* Reduce minimum width */
+  }
+
+  .testimonial-content p {
+    font-size: 14px; /* Adjust font size for better readability */
+  }
+
+  .testimonial-content small {
+    font-size: 12px; /* Adjust font size for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-wrapper {
+    width: 240vw;
+    padding: 20px 0; /* Adjust padding for smaller screens */
+  }
+
+  .testimonial-container {
+    padding: 0 5px; /* Further reduce container padding */
+  }
+
+  .testimonial-card {
+    margin: 5px 0; /* Reduce margin for very small screens */
+    min-width: 0; /* Ensure cards don’t exceed container width */
+    flex: 1 1 100%; /* Allow cards to take full width */
+  }
+
+  .testimonial-content p {
+    font-size: 22px; /* Adjust font size for better readability */
+  }
+
+  .testimonial-content small {
+    font-size: 22px; /* Adjust font size for better readability */
+  }
+}
